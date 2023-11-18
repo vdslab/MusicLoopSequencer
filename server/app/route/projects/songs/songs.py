@@ -104,7 +104,7 @@ def get_infomation_song(projectid, songid):
     return make_response(jsonify(response))
 
 
-@songs.route("/projects/<projectid>/songs/<songid>/wav/", methods=["GET"])
+@songs.route("/projects/<projectid>/songs/<songid>/wav", methods=["GET"])
 def download_song(projectid, songid):
     data = get_wav_data_from_song_id(songid)
 
